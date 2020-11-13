@@ -40,3 +40,15 @@ def find_account(account):
     Function that finds an account name and returns the account
     """
     return Credential.find_by_account(account)
+
+def check_existing_account(account):
+    """
+    Function that check if an account exists with that account name and return a Boolean
+    """
+    return Credential.account_exist(account)
+
+def display_accounts():
+    """
+    Function that returns all the saved accounts
+    """
+    return Credential.display_accounts()
