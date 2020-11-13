@@ -67,7 +67,16 @@ class TestAccount(unittest.TestCase):
 
         self.assertEqual(found_account.username,test_account.username)
 
-    
+    def test_account_exists(self):
+        """
+        test to check if we can return a Boolean if we cannot find the account.
+        """
+
+        self.new_account.save_account()
+        test_account= Credential("Instagram","ucynthy12","irebe")
+        test_account.save_account()
+        account_exists=Credential.account_exist("Instagram")
+        self.assertTrue(account_exists)
 
 
         
