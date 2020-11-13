@@ -77,6 +77,13 @@ class TestAccount(unittest.TestCase):
         test_account.save_account()
         account_exists=Credential.account_exist("Instagram")
         self.assertTrue(account_exists)
+    
+    def test_display_all_accounts(self):
+        """
+        Method that returns a list of all accounts saved
+        """
+        self.assertEqual(Credential.display_accounts(),Credential.account_list)
+
 
 
         
