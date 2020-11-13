@@ -28,3 +28,15 @@ def save_accounts(account):
     Function to save account
     """
     account.save_accounts()
+
+def delete_account(account):
+    """
+    Function to delete account
+    """
+    account.delete_account()
+
+def find_account(account):
+    """
+    Function that finds an account name and returns the account
+    """
+    return Credential.find_by_account(account)
