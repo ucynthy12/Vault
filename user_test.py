@@ -6,7 +6,7 @@ class TestUser(unittest.TestCase):
     Test class that defines test cases for user class behaviours.
 
     Args:
-        unittest.TestCase: TestCase class that helps creatin test cases
+        unittest.TestCase: TestCase class that helps creating test cases
     """
 
     def setUp(self):
@@ -31,7 +31,7 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
 
-    def test_save_multiple_
+
 
 if __name__ == '__main__':
     unittest.main()
