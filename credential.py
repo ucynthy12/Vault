@@ -1,4 +1,4 @@
-# import pyperclip
+import pyperclip
 import random
 
 
@@ -79,11 +79,7 @@ class Credential:
         
         return password
 
-
-           
-        
-    
-    # @classmethod
-    # def copy_password(cls,account):
-    #     account_found= Credential.find_by_account(account)
-    #     pyperclip.copy(account_found.password)
+    @classmethod
+    def copy_password(cls,account):
+        account_found= Credential.find_by_account(account)
+        pyperclip.copy(account_found.password)
