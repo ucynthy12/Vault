@@ -1,6 +1,6 @@
 import unittest
 from credential import Credential
-# import pyperclip
+import pyperclip
 class TestAccount(unittest.TestCase):
     """
     Test class that defines test cases for credential class behaviours.
@@ -84,7 +84,20 @@ class TestAccount(unittest.TestCase):
         """
         self.assertEqual(Credential.display_accounts(),Credential.account_list)
 
+    def test_copy_password(self):
+        """
+        Method that test if password was copied on clipboard
+        """
+        self.new_account.save_account() 
+        Credential.copy_password('Twitter')
+        self.assertEqual(self.new_account.acc_pswd,pyperclip.paste())
 
+    def test_random_password(self):
+        """
+        Method that returns random password
+        """
+        random=Credential.generate_random()
+        self.assertTrue(random)
 
         
 if __name__ == '__main__':
